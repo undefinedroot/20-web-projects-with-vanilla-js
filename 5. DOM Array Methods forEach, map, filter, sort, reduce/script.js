@@ -25,6 +25,9 @@ async function getRandomUser() {
 // Double everyones money
 function doubleMoney() {
   // create a new array based on manipulating existing array
+  // create a new object based off 'data', where we
+  //   expand the individual object and then update the property
+  //   { ...obj, prop: obj.prop*2 }
   data = data.map(user => ({ ...user, money: user.money * 2 }));
   updateDOM();
 }
@@ -39,7 +42,7 @@ function sortByRichest() {
 // Filter only millionaires
 function showMillionaires() {
   // reassign filtered objects
-  data = data.filter(user => user.money > MILLION_VALUE);
+  data = data.filter(user => user.money >= MILLION_VALUE);
   updateDOM();
 }
 

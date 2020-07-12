@@ -2,7 +2,7 @@ const video = document.getElementById('video');
 const play = document.getElementById('play');
 const stop = document.getElementById('stop');
 const progress = document.getElementById('progress');
-const time = document.getElementById('time');
+const timestamp = document.getElementById('timestamp');
 
 // Play & pause video
 function toggleVideoStatus() {
@@ -11,7 +11,7 @@ function toggleVideoStatus() {
 
 // Update play/pause icon
 function updatePlayIcon() {
-  video.paused ? play.innerHTML = '<i class="fa fa-play fa-2x"/>' : play.innerHTML = '<i class="fa fa-pause fa-2x"/>';
+  play.innerHTML = (video.paused ? '<i class="fa fa-play fa-2x"/>' : '<i class="fa fa-pause fa-2x"/>');
 }
 
 // Update progress & timestamp
