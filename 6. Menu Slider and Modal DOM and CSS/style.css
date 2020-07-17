@@ -13,6 +13,7 @@
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
+  overflow-x: hidden;
 }
 
 body.show-nav {
@@ -29,7 +30,7 @@ nav {
   top: 0;
   left: 0;
   width: 200px;
-  height: 100vh;
+  height: 100%;
   z-index: 100; /*always on top*/
   transform: translateX(-100%); /* offscreen */
 }

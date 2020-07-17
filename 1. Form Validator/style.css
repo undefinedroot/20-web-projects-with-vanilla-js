@@ -48,14 +48,14 @@ h2 {
 
 .form-control label {
   color: #777;
-  display: block;
+  display: block; /* needs to be 'block' to occupy the whole row */
   margin-bottom: 5px;
 }
 
 .form-control input {
   border: 2px solid #f0f0f0;
   border-radius: 4px;
-  display: block;
+  display: block; /* needs to be 'block' to occupy the whole row */
   width: 100%;
   padding: 10px;
   font-size: 14px;
@@ -63,7 +63,7 @@ h2 {
 
 /* remove outline */
 .form-control input:focus {
-  outline: 0;
+  outline: 0; /* removes the selection outline */
   border-color: #777;
 }
 
