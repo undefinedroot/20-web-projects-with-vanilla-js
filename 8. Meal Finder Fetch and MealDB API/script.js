@@ -70,7 +70,6 @@ async function getRandomMeal() {
 
 // Add meal to DOM
 function addMealToDOM(meal) {
-  console.log(meal);
   const ingredients = [];
   for (let i = 1; i <= 20; i++) {
     // retrieval of property from object using the actual property name as indexer
@@ -114,13 +113,7 @@ mealsEl.addEventListener('click', e => {
   const e_path = e.path || (e.composedPath && e.composedPath());
 
   // go through all child elements
-  const mealInfo = e_path.find(item => {
-    if (item.classList) {
-      return item.classList.contains('meal-info');
-    } else {
-      return false;
-    }
-  });
+  const mealInfo = e_path.find(item => item.classList ? item.classList.contains('meal-info') : false);
 
   if (mealInfo) {
     // this is where we retrieve the value of the custom html5 attribute
